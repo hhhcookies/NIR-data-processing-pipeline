@@ -3,15 +3,14 @@ A python based data processing pipeline for NIR spectroscopy
 
 Automatic pipeline to process raw NIR spectrum file (.xlsx)
 
-**Environment requirements:**
+**Environment requirements:**  
 environment.yml
 
-**Files:**
-
-Run the processing pipeline: main.py /n
-spectrum file path and formulation info: config.py
-Funtions for processing: NIR_processing.py
-Jupyter notebook example: example.ipynb
+**Files:**  
+Run the processing pipeline: main.py  
+spectrum file path and formulation info: config.py  
+Funtions for processing: NIR_processing.py  
+Jupyter notebook example: example.ipynb  
 
 
 **Pipeline procedure:**
