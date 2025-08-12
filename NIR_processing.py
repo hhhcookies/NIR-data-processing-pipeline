@@ -105,10 +105,10 @@ def preprocessing_pipeline(metadata,spectrum,smooth_window=31,polyorder=2,SNV=SN
     
     if SNV:
         SNVed = smooth_spectrum_df.apply(SNV,axis=1)
-        plot_spectrum(metadata,SNVed,f'smooth with window = {smooth_window} + SNV')
+        plot_spectrum(metadata,SNVed,f'smooth with window={smooth_window} + SNV')
 
     processed = SNVed-SNVed.mean()
-
+    plot_spectrum(metadata,processed,f'smooth + SNV + centering')
     return processed
 
 
@@ -226,6 +226,12 @@ def sample_plot(metadata,scores,groupby,categorical,X='PC1',Y='PC3',total_number
         plt.xlabel(X,fontsize=15)
         plt.ylabel(Y,fontsize=15)
         ax.set_title('Sample plot',fontsize=15)
+        sm = plt.cm.ScalarMappable(norm,cmap)
+        sm.set_array(metadata[groupby])
+        cbar = fig.colorbar(sm,ax=ax)
+        cbar.ax.tick_params(labelsize=12)
+        cbar.set_label(groupby,fontsize=14)
+
 
 
 def loading_plot(processed_spectrum,loading,selected_PC='PC1',total_number_of_PC=3):
