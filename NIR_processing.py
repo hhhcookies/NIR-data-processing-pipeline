@@ -243,7 +243,7 @@ def loading_plot(processed_spectrum,loading,selected_PC='PC1',total_number_of_PC
     plt.figure(figsize=(12,5))
     plt.plot(processed_spectrum.columns,loading[pc_map[selected_PC],:])
     plt.xlabel(selected_PC,fontsize=15)
-    plt.ylabel('loadings on '+selected_PC)
+    plt.ylabel('loadings on '+selected_PC,fontsize=15)
     plt.axhline(y=0,color='black',ls='--')
     plt.gca().invert_xaxis()
 

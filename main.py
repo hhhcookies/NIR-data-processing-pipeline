@@ -39,12 +39,17 @@ def main():
     nir.sample_plot(metadata, score, "perc_A", False)
     nir.sample_plot(metadata, score, "perc_S", False)
 
-    # 9.find optimal number of components for PLS
+    # 9.Loading plot
+    print("plot loadings for selected principle component...")
+    nir.loading_plot(processed,loading,'PC1')
+    nir.loading_plot(processed,loading,'PC3')
+
+    # 10.find optimal number of components for PLS
     print("Optimizing PLS components...")
     cv_r2_percA = nir.optimum_variables(processed.values, metadata["perc_A"].values, max_components=20)
     # cv_r2_percS = nir.optimum_variables(processed.values, metadata["perc_S"].values, max_components=20)
 
-    # 10.Train PLS models
+    # 11.Train PLS models
     print("Training PLS models...")
     pls = nir.PLS(n_components=2)
     pls.fit(processed.values, metadata["perc_A"])
@@ -52,7 +57,7 @@ def main():
     # pls_S = nir.PLS(n_components=5)
     # pls_S.fit(processed.values, metadata["perc_S"])
 
-    # 11.Prediction and residual plot
+    # 12.Prediction and residual plot
     print("Predicting for perc_A...")
     nir.prediction(pls, metadata, processed, "perc_A", lb=-0.5, ub=3)
 
