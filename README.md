@@ -1,4 +1,7 @@
 # NIR-data-processing-pipeline
+
+**Description:**
+
 A python based data processing pipeline for NIR spectroscopy
 
 Automatic pipeline to process raw NIR spectrum file (.xlsx)
