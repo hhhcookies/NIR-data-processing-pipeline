@@ -6,6 +6,10 @@ Automatic pipeline to process raw NIR spectrum file (.xlsx)
 Environment requirements:
 environment.yml
 
+Run the processing pipeline: main.py
+spectrum file path and formulation info: config.py
+Funtions for processing: NIR_processing.py
+
 
 Pipeline procedure:
 1. Import data, seperate metadata and spectrum data
