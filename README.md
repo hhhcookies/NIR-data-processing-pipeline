@@ -7,7 +7,8 @@ Automatic pipeline to process raw NIR spectrum file (.xlsx)
 environment.yml
 
 **Files:**
-Run the processing pipeline: main.py
+
+Run the processing pipeline: main.py /n
 spectrum file path and formulation info: config.py
 Funtions for processing: NIR_processing.py
 Jupyter notebook example: example.ipynb
