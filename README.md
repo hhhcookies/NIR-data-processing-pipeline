@@ -25,9 +25,10 @@ Jupyter notebook example: example.ipynb
 6. Tune PCA hyperparameters by checking explained variance
 7. Detect possible outlier in Q residual - Hotelling T^2 plot
 8. Draw PCA score plot, colored by selected metadata column
-9. Find optimal number of latent variable for PLS
-10. Train PLS model with determined number of components
-11. Check prediction plot and residual plot of the PLS model
+9. Draw loading plot for selected principle components
+10. Find optimal number of latent variable for PLS
+11. Train PLS model with determined number of components
+12. Check prediction plot and residual plot of the PLS model
 
 **To run the code:**
 1. Change the file path and formulation in config.py
